@@ -53,7 +53,7 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans K
 .ccard:nth-child(1){transform:rotate(-2.5deg)} .ccard:nth-child(2){transform:rotate(2deg) translateY(10px)}
 .ccard:nth-child(3){transform:rotate(1.5deg)} .ccard:nth-child(4){transform:rotate(-2deg) translateY(10px)}
 .ccard:hover{transform:rotate(0) scale(1.04)}
-.ccard .ch{width:min(120px,80%);margin:0 auto}
+.ccard .ch{width:min(150px,92%);margin:-6px auto -4px}
 .ccard .code{font-size:11px;font-weight:800;letter-spacing:.14em;opacity:.75}
 .ccard b{display:block;font-size:22px;line-height:1.2}
 .ccard span{display:block;font-size:12.5px;font-weight:600;opacity:.85;margin-top:2px}
@@ -100,7 +100,7 @@ body{font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic","Noto Sans K
 .rhead{display:grid;grid-template-columns:1fr;gap:10px;align-items:center;background:var(--accent);color:var(--on);border:var(--bw) solid var(--ink);border-radius:26px;box-shadow:7px 7px 0 var(--ink);padding:26px 24px 30px;position:relative;overflow:hidden}
 .rhead::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.18) 1.5px,transparent 1.5px);background-size:18px 18px;pointer-events:none}
 .rhead > *{position:relative}
-.rhead .ch{width:min(190px,55%);margin:0 auto;order:-1}
+.rhead .ch{width:min(220px,62%);margin:0 auto;order:-1}
 .rhead .code{font-size:12px;font-weight:800;letter-spacing:.16em;opacity:.8}
 .rhead h2{font-size:clamp(50px,10vw,84px);line-height:1;margin:6px 0 8px}
 .rhead .alias{font-size:17px;font-weight:700;opacity:.92}
@@ -132,7 +132,7 @@ ul.clean.warn li::before{content:"!";background:var(--dp)}
 .roles div em{font-style:normal;flex:none;width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--accent);color:var(--on);border:2px solid var(--ink);font-size:12px;font-weight:900}
 .map{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;aspect-ratio:1.5/1;border:var(--bw) solid var(--ink);border-radius:16px;overflow:hidden;position:relative}
 .map > div{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px;background:var(--paper);border:1.25px solid var(--ink);font-size:14px;transition:background .4s}
-.map > div .ch{width:44%;max-width:64px;filter:grayscale(1);opacity:.4;transition:filter .4s,opacity .4s}
+.map > div .ch{width:52%;max-width:84px;filter:grayscale(1);opacity:.4;transition:filter .4s,opacity .4s}
 .map > div > span{opacity:.45}
 .map > div.on{background:var(--c);color:var(--o)}
 .map > div.on .ch{filter:none;opacity:1}
@@ -162,7 +162,7 @@ ul.clean.warn li::before{content:"!";background:var(--dp)}
   .opt{min-height:110px;align-items:flex-start}
   .qcard{padding:40px 36px 34px}
   .rhead{grid-template-columns:1.4fr 1fr;padding:40px 44px}
-  .rhead .ch{order:0;width:min(250px,100%)}
+  .rhead .ch{order:0;width:min(290px,100%);margin:-20px auto}
   .rgrid{grid-template-columns:1fr 1fr}
   .rgrid .span{grid-column:1/-1}
   .roles{grid-template-columns:1fr 1fr 1fr}
@@ -330,7 +330,7 @@ const QUESTIONS = [
 ];
 
 const TYPES = {
-  VP:{ name:"커넥터", alias:"판을 여는 네트워커", en:"The Connector", color:"#ff6b4a", on:INK, cheek:"#ffd3c4",
+  VP:{ shade:"#d9482a", name:"커넥터", alias:"판을 여는 네트워커", en:"The Connector", color:"#ff6b4a", on:INK, cheek:"#ffd3c4",
     quote:"이 분이랑 저 분 연결하면 뭔가 재밌는 게 나오겠는데?",
     keywords:["#기회포착","#관계자산","#설득력"],
     desc:"남들이 아직 못 본 가능성을 먼저 알아채고, 그걸 현실로 만들어 줄 사람을 찾아 엮는 사람이에요. 모임에 가면 어느새 대화의 중심에 있고, 명함보다 '그 사람 내가 알아'라는 말이 더 자연스러워요. 정해진 길보다 아직 지도에 없는 길에서 더 살아나요.",
@@ -339,7 +339,7 @@ const TYPES = {
     roles:["사업개발(BD)","파트너십 매니저","브랜드 마케터","스타트업 창업가","VC 심사역 (딜 소싱)","커뮤니티 리드"],
     env:"자율성이 크고 외부 접점이 많은 곳이 잘 맞아요. 초기 스타트업이나 신사업팀처럼 정답이 정해지지 않은 환경에서 강해요.",
     partner:"DS", partnerWhy:"내가 열어놓은 판을 정확하고 단단하게 완성해 줘요." },
-  VS:{ name:"아키텍트", alias:"구조를 설계하는 전략가", en:"The Architect", color:"#4361ee", on:"#ffffff", cheek:"#ff9fc0",
+  VS:{ shade:"#2c45c4", name:"아키텍트", alias:"구조를 설계하는 전략가", en:"The Architect", color:"#4361ee", on:"#ffffff", cheek:"#ff9fc0",
     quote:"잠깐, 그래서 결국 핵심이 뭐지?",
     keywords:["#구조화","#가설검증","#냉철함"],
     desc:"흩어진 정보 속에서 패턴을 찾아 하나의 논리로 엮어내는 사람이에요. 다들 감으로 넘어가는 순간에 근거를 묻고, 복잡한 문제일수록 오히려 눈이 반짝여요. 화이트보드 한 장에 전체 그림을 정리해 낼 때 가장 뿌듯해요.",
@@ -348,7 +348,7 @@ const TYPES = {
     roles:["전략기획","경영 컨설턴트","리서치 애널리스트","프로덕트 매니저","투자 심사역 (분석)","데이터 사이언티스트"],
     env:"생각할 시간과 깊이를 존중해 주는 곳이 잘 맞아요. 문제 정의부터 맡겨주는 팀에서 실력이 가장 잘 드러나요.",
     partner:"DP", partnerWhy:"내가 세운 전략을 사람을 통해 실제 실행으로 옮겨 줘요." },
-  DP:{ name:"캡틴", alias:"팀을 결승선까지 이끄는 리더", en:"The Captain", color:"#ffc53d", on:INK, cheek:"#ff9f6b",
+  DP:{ shade:"#e9a20e", name:"캡틴", alias:"팀을 결승선까지 이끄는 리더", en:"The Captain", color:"#ffc53d", on:INK, cheek:"#ff9f6b",
     quote:"좋아요, 그럼 각자 금요일까지 이것만 끝내 봅시다!",
     keywords:["#추진력","#조율","#책임감"],
     desc:"목표가 정해지는 순간 누가 뭘 언제까지 해야 할지가 머릿속에 그려지는 사람이에요. 팀의 분위기와 속도를 동시에 챙기면서 결국 결승선까지 끌고 가요. 급한 상황일수록 오히려 침착해져서, 위기 때 다들 먼저 찾는 사람이에요.",
@@ -357,7 +357,7 @@ const TYPES = {
     roles:["프로젝트 매니저","영업 · 고객관리(RM)","운영 리드","HR · 조직문화","세일즈 트레이딩","프로그램 · 행사 기획"],
     env:"목표가 분명하고 팀워크가 살아 있는 곳이 잘 맞아요. 성과가 눈에 보이고 피드백이 빠른 일에서 동기부여가 커요.",
     partner:"VS", partnerWhy:"어디로 가야 할지 방향을 잡아줘서 내 추진력이 헛돌지 않게 해 줘요." },
-  DS:{ name:"마이스터", alias:"끝까지 다듬는 완성가", en:"The Meister", color:"#9b5de5", on:"#ffffff", cheek:"#ffa8d8",
+  DS:{ shade:"#7a3fc4", name:"마이스터", alias:"끝까지 다듬는 완성가", en:"The Meister", color:"#9b5de5", on:"#ffffff", cheek:"#ffa8d8",
     quote:"이거 매번 손으로 하지 말고, 그냥 자동으로 돌아가게 만들죠.",
     keywords:["#정확성","#체계화","#전문성"],
     desc:"보이지 않는 곳까지 신경 쓰는 완성도의 사람이에요. 한 번 맡은 일은 제대로 돌아가게 만들고, 반복되는 일은 아예 시스템으로 바꿔 버려요. 화려하게 드러나진 않아도, 조직이 가장 믿고 기대는 사람이에요.",
@@ -371,49 +371,117 @@ const ORDER = ["VP","VS","DP","DS"];
 const STORE_KEY = "careerTypeTest.lastResult.v1";
 
 /* ---------- 캐릭터 (오리지널 SVG) ---------- */
+let __uid = 0;
 function charSVG(code){
-  const t = TYPES[code], c = t.color;
-  const S = `stroke="${INK}" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"`;
-  const eye = (x,y) => `<circle cx="${x}" cy="${y}" r="5" fill="${INK}"/><circle cx="${x+1.7}" cy="${y-1.7}" r="1.8" fill="#fff"/>`;
-  const cheeks = (y,a,b) => `<ellipse cx="${a}" cy="${y}" rx="6" ry="3.5" fill="${t.cheek}" opacity=".85"/><ellipse cx="${b}" cy="${y}" rx="6" ry="3.5" fill="${t.cheek}" opacity=".85"/>`;
+  const t = TYPES[code], c = t.color, sh = t.shade, u = "k" + (++__uid);
+  const O  = `stroke="${INK}" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"`;
+  const O2 = `stroke="${INK}" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"`;
+  const DARK = "#2a2440";
+  const eye = (x,y,s=1) =>
+    `<ellipse cx="${x}" cy="${y}" rx="${5.4*s}" ry="${6.6*s}" fill="${INK}"/>`+
+    `<circle cx="${x+1.9*s}" cy="${y-2.5*s}" r="${2.3*s}" fill="#fff"/>`+
+    `<circle cx="${x-2*s}" cy="${y+2.7*s}" r="${1.05*s}" fill="#fff"/>`;
+  const blush = (x,y) =>
+    `<ellipse cx="${x}" cy="${y}" rx="7.5" ry="4.2" fill="${t.cheek}"/>`+
+    `<ellipse cx="${x-2.4}" cy="${y-1.2}" rx="2.2" ry="1.1" fill="#fff" opacity=".7"/>`;
+  const arm = (d,hx,hy) =>
+    `<path d="${d}" fill="none" stroke="${INK}" stroke-width="12.5" stroke-linecap="round"/>`+
+    `<path d="${d}" fill="none" stroke="${c}" stroke-width="6" stroke-linecap="round"/>`+
+    `<circle cx="${hx}" cy="${hy}" r="7.8" fill="${c}" ${O}/>`+
+    `<path d="M${hx-3.5} ${hy-2.5} a4 4 0 0 1 5 -1.5" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" opacity=".6"/>`;
+  const foot = (x,y,w=13,h=7) => `<ellipse cx="${x}" cy="${y}" rx="${w}" ry="${h}" fill="${sh}" ${O}/>`;
+  // 몸통: 그림자 → 본색(살짝 위로) → 하이라이트 → 외곽선
+  const body = (shape, hl) =>
+    `<clipPath id="${u}">${shape("#000","")}</clipPath>`+
+    `<g clip-path="url(#${u})"><rect width="160" height="160" fill="${sh}"/>`+
+    `<g transform="translate(-6 -7)">${shape(c,"")}</g>${hl}</g>`+
+    shape("none", O);
+  const ground = `<circle cx="80" cy="84" r="70" fill="#fff" opacity=".2"/><ellipse cx="80" cy="150" rx="42" ry="5.5" fill="${INK}" opacity=".14"/>`;
+  const shine = (x,y,rx,ry,rot) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" transform="rotate(${rot} ${x} ${y})" fill="#fff" opacity=".5"/>`;
   let g = "";
-  if(code === "VP"){ // 양팔 벌린 동그라미 — 연결하는 사람
-    g = `<path d="M26 64 Q8 52 12 32" fill="none" ${S} stroke-width="4"/>
-      <path d="M94 64 Q112 52 108 32" fill="none" ${S} stroke-width="4"/>
-      <circle cx="12" cy="29" r="7" fill="${c}" ${S}/><circle cx="108" cy="29" r="7" fill="${c}" ${S}/>
-      <path d="M4 14 l6 4 M14 8 l1 7 M106 8 l-1 7 M116 14 l-6 4" ${S} stroke-width="2.5"/>
-      <circle cx="60" cy="70" r="38" fill="${c}" ${S}/>
-      ${eye(47,64)}${eye(73,64)}${cheeks(78,36,84)}
-      <path d="M46 80 Q60 93 74 80" fill="none" ${S} stroke-width="3.5"/>`;
-  }else if(code === "VS"){ // 안경 쓴 삼각형 — 구조를 짜는 사람
-    g = `<path d="M60 14 L106 100 Q108 107 100 107 L20 107 Q12 107 14 100 Z" fill="${c}" ${S}/>
-      <path d="M98 14 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3z" fill="#ffc53d" ${S} stroke-width="2"/>
-      <circle cx="47" cy="76" r="10.5" fill="#fff" ${S}/><circle cx="73" cy="76" r="10.5" fill="#fff" ${S}/>
-      <path d="M57.5 75 L62.5 75" ${S}/>
-      <circle cx="48.5" cy="77" r="3.8" fill="${INK}"/><circle cx="74.5" cy="77" r="3.8" fill="${INK}"/>
-      ${cheeks(93,34,86)}
-      <path d="M53 95 Q60 99.5 67 95" fill="none" ${S}/>`;
-  }else if(code === "DP"){ // 선장 모자 쓴 네모 — 팀을 이끄는 사람
-    g = `<rect x="20" y="40" width="80" height="68" rx="20" fill="${c}" ${S}/>
-      <path d="M30 45 Q30 13 60 13 Q90 13 90 45 Z" fill="#fff" ${S}/>
-      <path d="M15 47 Q60 34 105 47 L103 54 Q60 43 17 54 Z" fill="${INK}" ${S}/>
-      <path d="M60 22 l2.6 5.4 5.9.8 -4.3 4.1 1 5.8 -5.2-2.8 -5.2 2.8 1-5.8 -4.3-4.1 5.9-.8z" fill="#ff6b4a" ${S} stroke-width="1.8"/>
-      <path d="M37 71 Q44 63 51 71" fill="none" ${S} stroke-width="3.5"/><path d="M69 71 Q76 63 83 71" fill="none" ${S} stroke-width="3.5"/>
-      ${cheeks(81,33,87)}
-      <path d="M44 85 L76 85 Q74 101 60 101 Q46 101 44 85 Z" fill="${INK}" ${S}/>
-      <path d="M52 96 Q60 91 68 96 Q60 101 52 96 Z" fill="#ff6b4a"/>`;
-  }else{ // 고글 쓴 로봇 — 끝까지 만드는 사람
-    g = `<path d="M60 30 L60 16" ${S}/>
-      <path d="M63 2 L53 15 L60 15 L56 25 L68 11 L61 11 Z" fill="#ffc53d" ${S} stroke-width="2"/>
-      <rect x="24" y="30" width="72" height="78" rx="16" fill="${c}" ${S}/>
-      <rect x="24" y="44" width="72" height="8" fill="${INK}"/>
-      <circle cx="44" cy="48" r="11" fill="#bdefff" ${S}/><circle cx="76" cy="48" r="11" fill="#bdefff" ${S}/>
-      <path d="M39 44 L42.5 41 M71 44 L74.5 41" stroke="#fff" stroke-width="2.6" stroke-linecap="round"/>
-      ${eye(46,76)}${eye(74,76)}${cheeks(88,36,84)}
-      <path d="M52 92 Q60 97.5 68 92" fill="none" ${S}/>
-      <rect x="50" y="100" width="20" height="3.5" rx="1.75" fill="${INK}" opacity=".35"/>`;
+
+  if(code === "VP"){ // 커넥터: 한 손 흔들며 HELLO 이름표 단 동그라미
+    const sh_ = (f,s) => `<circle cx="80" cy="88" r="46" fill="${f}" ${s}/>`;
+    g = ground + foot(62,138) + foot(98,138)
+      + arm("M42 84 Q20 72 21 46", 21, 44)
+      + arm("M118 94 Q138 100 136 120", 136, 121)
+      + body(sh_, shine(58,62,6,13,40) + `<circle cx="104" cy="58" r="3" fill="#fff" opacity=".5"/>`)
+      + `<path d="M8 42 l-7 -2 M10 31 l-6 -6 M20 25 l-1 -8" fill="none" ${O2}/>`
+      + `<path d="M80 43 C76 30 92 26 92 36 C92 43 84 43 85 36" fill="none" ${O}/>`
+      + `<path d="M58 66 q7 -5 14 -1" fill="none" ${O} stroke-width="3"/><path d="M88 65 q7 -4 14 1" fill="none" ${O} stroke-width="3"/>`
+      + eye(65,80) + eye(95,80) + blush(52,93) + blush(108,93)
+      + `<path d="M67 92 Q80 109 93 92 Z" fill="${INK}" ${O} stroke-width="3"/>`
+      + `<path d="M72 101 Q80 96 88 101 Q80 107 72 101 Z" fill="#ff8fab"/>`
+      + `<rect x="62" y="110" width="36" height="22" rx="4" fill="#fff" ${O2}/>`
+      + `<path d="M62 118 V114 a4 4 0 0 1 4 -4 h28 a4 4 0 0 1 4 4 V118 Z" fill="#ff3d6e" ${O2}/>`
+      + `<text x="80" y="116.6" text-anchor="middle" font-size="6" font-weight="900" font-family="Arial,sans-serif" fill="#fff" letter-spacing=".6">HELLO</text>`
+      + `<path d="M68 126 q3 -4 6 0 t6 0 t6 0 t6 0" fill="none" stroke="${INK}" stroke-width="1.8" stroke-linecap="round"/>`;
   }
-  return `<svg viewBox="0 0 120 120" aria-hidden="true">${g}</svg>`;
+  else if(code === "VS"){ // 아키텍트: 안경 + 연필 + 설계도 든 삼각형
+    const tri = "M71 30 Q80 15 89 30 L134 116 Q142 132 125 132 L35 132 Q18 132 26 116 Z";
+    const sh_ = (f,s) => `<path d="${tri}" fill="${f}" ${s}/>`;
+    g = ground + foot(58,138) + foot(102,138)
+      + `<g transform="rotate(32 110 40)"><rect x="105" y="16" width="11" height="40" fill="#ffc53d" ${O2}/><path d="M105 16 h11 v-5 a5.5 5.5 0 0 0 -11 0 Z" fill="#ff8fab" ${O2}/><path d="M105 56 L110.5 68 L116 56 Z" fill="#f6d7a7" ${O2}/><path d="M108.6 64 L110.5 68 L112.4 64 Z" fill="${INK}"/></g>`
+      + arm("M116 106 Q134 104 140 90", 140, 89)
+      + body(sh_, shine(64,62,4.5,15,28))
+      + `<g transform="rotate(-24 140 80)"><rect x="124" y="74" width="34" height="13" rx="6.5" fill="#dbe7ff" ${O2}/><ellipse cx="155" cy="80.5" rx="3.2" ry="6.5" fill="#b9cdf9" ${O2}/><path d="M129 78.5 h17 M129 82.5 h11" stroke="${c}" stroke-width="1.8" stroke-linecap="round"/></g>`
+      + `<circle cx="140" cy="89" r="7.8" fill="${c}" ${O}/>`
+      + `<path d="M130 22 l3.2 7.4 7.4 3.2 -7.4 3.2 -3.2 7.4 -3.2 -7.4 -7.4 -3.2 7.4 -3.2z" fill="#ffc53d" ${O2}/>`
+      + `<path d="M52 74 q8 -5 16 -1" fill="none" ${O} stroke-width="3"/><path d="M90 69 q9 -7 17 -1" fill="none" ${O} stroke-width="3"/>`
+      + `<circle cx="64" cy="92" r="13.5" fill="#fff" ${O}/><circle cx="97" cy="92" r="13.5" fill="#fff" ${O}/>`
+      + `<path d="M77.5 90 q3 -3.5 6 0" fill="none" ${O} stroke-width="3"/>`
+      + eye(66,94,.72) + eye(99,94,.72)
+      + `<path d="M55 86 l6 -6 M88 86 l6 -6" stroke="#cfe0ff" stroke-width="3" stroke-linecap="round"/>`
+      + blush(48,111) + blush(113,111)
+      + `<path d="M71 114 Q81 120 91 111" fill="none" ${O} stroke-width="3"/>`;
+  }
+  else if(code === "DP"){ // 캡틴: 선장 모자 + 깃발 든 네모
+    const sq = (f,s) => `<rect x="26" y="48" width="108" height="86" rx="26" fill="${f}" ${s}/>`;
+    g = ground + foot(58,140,14) + foot(102,140,14)
+      + `<rect x="143" y="22" width="5" height="56" rx="2" fill="#8a5a3b" ${O2}/>`
+      + `<path d="M148 24 Q158 28 159 33 Q156 38 148 44 Z" fill="#ff6b4a" ${O2}/>`
+      + arm("M30 94 Q8 100 22 118", 22, 119)
+      + arm("M130 98 Q146 92 145.5 74", 145.5, 72)
+      + body(sq, shine(44,74,5.5,12,18))
+      + `<path d="M40 56 Q40 13 80 13 Q120 13 120 56 Z" fill="#fff" ${O}/>`
+      + `<path d="M104 22 Q120 30 120 56 L108 56 Q110 36 104 22 Z" fill="#e6e1f2"/>`
+      + `<path d="M40 56 Q40 13 80 13 Q120 13 120 56" fill="none" ${O}/>`
+      + `<path d="M50 44 Q80 36 110 44" fill="none" stroke="#ffc53d" stroke-width="3" stroke-linecap="round"/>`
+      + `<path d="M37 53 Q80 42 123 53 L123 61 Q80 51 37 61 Z" fill="${INK}"/>`
+      + `<path d="M44 60 Q80 79 116 60 Q80 68 44 60 Z" fill="${DARK}" ${O2}/>`
+      + `<path d="M80 21 l3 6.2 6.8 1 -4.9 4.8 1.2 6.8 -6.1 -3.2 -6.1 3.2 1.2 -6.8 -4.9 -4.8 6.8 -1z" fill="#ffc53d" ${O2}/>`
+      + `<path d="M53 76 l15 -3" ${O} stroke-width="3"/><path d="M107 76 l-15 -3" ${O} stroke-width="3"/>`
+      + `<path d="M54 90 Q62 80 70 90" fill="none" ${O} stroke-width="4"/><path d="M90 90 Q98 80 106 90" fill="none" ${O} stroke-width="4"/>`
+      + blush(44,103) + blush(116,103)
+      + `<path d="M58 99 L102 99 Q100 124 80 124 Q60 124 58 99 Z" fill="${INK}" ${O} stroke-width="3"/>`
+      + `<path d="M61 100.5 L99 100.5 L98.2 106 L61.8 106 Z" fill="#fff"/>`
+      + `<path d="M67 117 Q80 109 93 117 Q80 124 67 117 Z" fill="#ff6b4a"/>`;
+  }
+  else { // 마이스터: 고글 + 렌치 든 로봇
+    const rb = (f,s) => `<rect x="32" y="46" width="96" height="90" rx="20" fill="${f}" ${s}/>`;
+    g = ground
+      + `<rect x="52" y="130" width="18" height="14" rx="5" fill="${sh}" ${O}/><rect x="90" y="130" width="18" height="14" rx="5" fill="${sh}" ${O}/>`
+      + `<rect x="21" y="78" width="14" height="24" rx="5" fill="${sh}" ${O}/><rect x="125" y="78" width="14" height="24" rx="5" fill="${sh}" ${O}/>`
+      + `<path d="M80 46 V34" ${O}/>`
+      + `<path d="M85 4 L70 25 L80 25 L75 38 L93 15 L83 15 Z" fill="#ffc53d" ${O2}/>`
+      + `<rect x="142.5" y="62" width="7" height="26" rx="3" fill="#c9cdd6" ${O2}/>`
+      + `<path d="M139 47 A10 10 0 1 0 153 47 L149.5 53 L142.5 53 Z" fill="#c9cdd6" ${O2}/>`
+      + arm("M128 108 Q148 108 146 86", 146, 85)
+      + body(rb, shine(46,92,4.5,14,8)
+          + `<rect x="32" y="58" width="96" height="11" fill="${INK}"/>`)
+      + `<circle cx="59" cy="64" r="15.5" fill="${DARK}" ${O}/><circle cx="101" cy="64" r="15.5" fill="${DARK}" ${O}/>`
+      + `<rect x="72" y="60" width="16" height="8" rx="2" fill="${DARK}" ${O2}/>`
+      + `<circle cx="59" cy="64" r="11" fill="#9fe7ff"/><circle cx="101" cy="64" r="11" fill="#9fe7ff"/>`
+      + `<path d="M52 61 q3 -5 9 -5.5 M94 61 q3 -5 9 -5.5" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>`
+      + `<path d="M55 85 l13 2.5" ${O} stroke-width="3.2"/><path d="M105 85 l-13 2.5" ${O} stroke-width="3.2"/>`
+      + eye(64,97) + eye(96,97) + blush(49,107) + blush(111,107)
+      + `<path d="M72 109 Q80 115 88 109" fill="none" ${O} stroke-width="3"/>`
+      + `<rect x="58" y="118" width="44" height="11" rx="4" fill="${DARK}" ${O2}/>`
+      + `<circle cx="66" cy="123.5" r="2.6" fill="#3ddc97"/><circle cx="74.5" cy="123.5" r="2.6" fill="#ffc53d"/><circle cx="83" cy="123.5" r="2.6" fill="#ff6b4a"/>`
+      + `<rect x="89" y="122" width="8" height="3" rx="1.5" fill="#8a84a3"/>`
+      + `<circle cx="40" cy="54" r="2.2" fill="${sh}"/><circle cx="120" cy="54" r="2.2" fill="${sh}"/><circle cx="40" cy="128" r="2.2" fill="${sh}"/><circle cx="120" cy="128" r="2.2" fill="${sh}"/>`;
+  }
+  return `<svg viewBox="0 0 160 160" aria-hidden="true">${g}</svg>`;
 }
 
 const $ = id => document.getElementById(id);
